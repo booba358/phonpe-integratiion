@@ -1,0 +1,54 @@
+{
+    "name": "sparkout-tech/phonepe",
+    "description": "",
+    "keywords": [
+        "sparkout-tech",
+        "phonepe"
+    ],
+    "homepage": "https://github.com/sparkout-tech/phonepe",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Boobalan Chandran",
+            "email": "boobalan@sparkouttech.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "illuminate/support": "^8.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "SparkoutTech\\Phonepe\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "SparkoutTech\\Phonepe\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "SparkoutTech\\Phonepe\\PhonepeServiceProvider"
+            ],
+            "aliases": {
+                "Phonepe": "SparkoutTech\\Phonepe\\PhonepeFacade"
+            }
+        }
+    },
+}
